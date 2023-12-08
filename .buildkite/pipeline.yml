@@ -1,3 +1,5 @@
 steps:
   - label: Build
+    env:
+      RELATIVE_CI_SLUG: relative-ci/example-cli-buildkite
     command: npm ci && npm run build && DEBUG=relative-ci:* npx relative-ci-agent
